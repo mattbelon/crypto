@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{%for key,values in crypto.DISPLAY.items %}
+    
+	<strong>Simbolo</strong>{{values.USD.FROMSYMBOL}}<br/>
+	<strong>Alta del dia</strong>{{values.USD.HIGHDAY}}<br/>
+	<strong>Baja del dia</strong>{{values.USD.LOWDAY}}<br/>
+	<strong>24 HS</strong>{{values.USD.CHANGE24HOUR}}<br/>
+	<strong>Baja 24 hs</strong>{{values.USD.LOW24HOUR}}<br/>
+	<strong>Alta 24 hs</strong>{{values.USD.HIGH24HOUR}}<br/>
+	<strong>Mercado</strong>{{values.USD.MKTCAP}}<br/>
+
+{% endfor %}
+
+
+	{{crypto}}
+{% endblock %}
